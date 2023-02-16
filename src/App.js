@@ -24,6 +24,11 @@ const App = () => {
   );
 
   return (
+    <div className ="App">
+      {/* <nav>
+        <a href="https://github.com/your-username">GitHub</a>
+        <a href="https://www.linkedin.com/in/your-username/">LinkedIn</a>
+      </nav> */}
     <div className='search-container'>
       <input
         type="text"
@@ -33,6 +38,7 @@ const App = () => {
         className="search-box"
       />
       {searchTerm ? <MoviesList movies={filteredMovies} /> : null}
+    </div>
     </div>
   );
 };
