@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+Movie API Database
+This is a simple React application that allows users to search for movies using The Movie Database (TMDb) API.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Technologies Used
+React: a popular JavaScript library for building user interfaces.
+Axios: a JavaScript library for making HTTP requests from the browser.
+Bootstrap: a popular CSS framework for building responsive and mobile-first websites.
+CSS animations: used to create a Hollywood-themed animation in the background.
+Installation Instructions
+Clone the repository to your local machine.
+Open a terminal window and navigate to the project directory.
+Run npm install to install the project dependencies.
+Obtain an API key from The Movie Database (TMDb) website.
+Create a .env file in the root directory of the project.
+Add your API key to the .env file as follows: REACT_APP_API_KEY=your-api-key-here.
+Run npm start to start the development server.
+Open your browser and navigate to http://localhost:3000 to view the application.
+Code Explanations
+The project is structured into several components, each with its own responsibility. The App component is the root component of the application, and it is responsible for fetching the movie data from the TMDb API and passing it down to the MoviesList component.
 
-## Available Scripts
+The MoviesList component is responsible for rendering the list of movies returned by the API. It does this by mapping over the movie data and rendering a MovieCard component for each movie.
 
-In the project directory, you can run:
+The MovieCard component is responsible for rendering the details of a single movie. It receives the movie data as props and renders the movie title, overview, poster image, and release date.
 
-### `npm start`
+The api.js file contains the function that fetches the movie data from the TMDb API. The function takes a search term as input and returns a Promise that resolves to an array of movie objects.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The App.css file contains the custom CSS styles used in the application. It includes styles for the search bar, movie cards, and background animation.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The nav.css file contains the custom CSS styles used for the sticky navigation menu.
 
-### `npm test`
+Unsolved Problems
+There are several ways to extend this project and add additional features, such as:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Adding pagination to the movie list to allow users to view more movies.
+Allowing users to filter movies by genre, rating, or release date.
+Adding user authentication and allowing users to save their favorite movies.
+Conclusion
+This is a simple yet effective React application that demonstrates how to fetch data from an external API and render it in a user-friendly way. It also demonstrates how to use third-party libraries and frameworks to create a modern and responsive user interface.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can view the live demo of this project [here](https://musical-sopapillas-fa7f2a.netlify.app/).
